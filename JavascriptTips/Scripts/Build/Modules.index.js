@@ -60,37 +60,11 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _Person = __webpack_require__(1);
-
-var _Engineer = __webpack_require__(4);
-
-//@ts-check
-(function () {
-    console.log("----------Person----------");
-    var person = new _Person.Person("John", 24);
-    person.introduceYourself();
-    person.add(5, 7);
-    console.log("--------------------------");
-
-    console.log("---------Engineer---------");
-    var engineer = new _Engineer.Engineer("Robert", 48, "Computer");
-    engineer.introduceYourself();
-    engineer.add(5, 7);
-    console.log("--------------------------");
-})();
-
-/***/ }),
-/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -160,9 +134,33 @@ var Person = exports.Person = function () {
 }();
 
 /***/ }),
-/* 2 */,
-/* 3 */,
-/* 4 */
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _Person = __webpack_require__(0);
+
+var _Engineer = __webpack_require__(2);
+
+//@ts-check
+(function () {
+    console.log("----------Person----------");
+    var person = new _Person.Person("John", 24);
+    person.introduceYourself();
+    person.add(5, 7);
+    console.log("--------------------------");
+
+    console.log("---------Engineer---------");
+    var engineer = new _Engineer.Engineer("Robert", 48, "Computer");
+    engineer.introduceYourself();
+    engineer.add(5, 7);
+    console.log("--------------------------");
+})();
+
+/***/ }),
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -175,7 +173,7 @@ exports.Engineer = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _Person2 = __webpack_require__(1);
+var _Person2 = __webpack_require__(0);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
