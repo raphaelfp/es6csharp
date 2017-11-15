@@ -13,8 +13,7 @@ module.exports = {
         //All files imported using the ES6 import keywork
         //SUPER IMPORTANT NOTE: Webpack DOES NOT GENERATE THIS FILE, THIS IS THE FILE YOU CREATE AND WORK ON.
         Modules: './Modules/index.js',
-        ModuleA: './ModuleA/index.js',
-        ModuleB: './ModuleB/index.js'
+        JavascriptTips: './JavascriptTips/index.js'
     },
     output: {
         //This is the transpiled file that webpack will create.

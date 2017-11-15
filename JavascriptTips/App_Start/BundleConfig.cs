@@ -22,11 +22,8 @@ namespace JavascriptTips
             bundles.Add(new ScriptBundle("~/bundles/modules").Include(
                         "~/Scripts/Build/Modules.index.js"));
 
-            bundles.Add(new ScriptBundle("~/bundles/module_a").Include(
-                        "~/Scripts/Build/ModuleA.index.js"));
-
-            bundles.Add(new ScriptBundle("~/bundles/module_b").Include(
-                        "~/Scripts/Build/ModuleB.index.js"));
+            bundles.Add(new ScriptBundle("~/bundles/javascript_tips").Include(
+                        "~/Scripts/Build/JavascriptTips.index.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",

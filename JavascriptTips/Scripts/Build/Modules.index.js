@@ -80,44 +80,44 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 //@ts-check
 
-var Person = exports.Person = function () {
+var Pessoa = exports.Pessoa = function () {
     /**
-     * A Person
-     * @param {string} name
-     * @param {number} age
+     * Uma pessoa
+     * @param {string} nome
+     * @param {number} idade
      */
-    function Person(name, age) {
-        _classCallCheck(this, Person);
+    function Pessoa(nome, idade) {
+        _classCallCheck(this, Pessoa);
 
-        this.name = name;
-        this.age = age;
+        this.nome = nome;
+        this.idade = idade;
     }
 
     /**
-     * Return the person's name
+     * Se apresenta
      * @returns {string}
      */
 
 
-    _createClass(Person, [{
-        key: "introduceYourself",
-        value: function introduceYourself() {
-            return "Hi, my name is " + this.name;
+    _createClass(Pessoa, [{
+        key: "seApresenta",
+        value: function seApresenta() {
+            return "Ol\xE1, meu nome \xE9 " + this.nome;
         }
 
         /**
-         * Return chit chat talk
+         * Dá um oi
          * @returns {string}
          */
 
     }, {
-        key: "talk",
-        value: function talk() {
-            return "Hey beauty!!!";
+        key: "dizOi",
+        value: function dizOi() {
+            return "Olar!!!";
         }
 
         /**
-         * Do you really think that I know math???
+         * Você acha realmente que eu sei fazer conta????
          * @param {number} x
          * @param {number} y
          * @returns {number}
@@ -130,7 +130,7 @@ var Person = exports.Person = function () {
         }
     }]);
 
-    return Person;
+    return Pessoa;
 }();
 
 /***/ }),
@@ -140,22 +140,22 @@ var Person = exports.Person = function () {
 "use strict";
 
 
-var _Person = __webpack_require__(0);
+var _Pessoa = __webpack_require__(0);
 
-var _Engineer = __webpack_require__(2);
+var _Engenheiro = __webpack_require__(2);
 
 //@ts-check
 (function () {
-    console.log("----------Person----------");
-    var person = new _Person.Person("John", 24);
-    person.introduceYourself();
-    person.add(5, 7);
+    console.log("----------Pessoa----------");
+    var pessoa = new _Pessoa.Pessoa("John", 24);
+    pessoa.seApresenta();
+    pessoa.add(5, 7);
     console.log("--------------------------");
 
-    console.log("---------Engineer---------");
-    var engineer = new _Engineer.Engineer("Robert", 48, "Computer");
-    engineer.introduceYourself();
-    engineer.add(5, 7);
+    console.log("--------Engenehrio--------");
+    var engenheiro = new _Engenheiro.Engenheiro("Robert", 48, "de Computação");
+    engenheiro.seApresenta();
+    engenheiro.add(5, 7);
     console.log("--------------------------");
 })();
 
@@ -169,11 +169,11 @@ var _Engineer = __webpack_require__(2);
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.Engineer = undefined;
+exports.Engenheiro = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _Person2 = __webpack_require__(0);
+var _Pessoa2 = __webpack_require__(0);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -181,38 +181,38 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } //@ts-check
 
-/**
-* An Engineer
-* @param {string} name - The engineer's name
-* @param {number} age - The engineer's age
-* @param {string} field - The engineer's field
-*/
-var Engineer = function (_Person) {
-    _inherits(Engineer, _Person);
+var Engenheiro = function (_Pessoa) {
+    _inherits(Engenheiro, _Pessoa);
 
-    function Engineer(name, age, field) {
-        _classCallCheck(this, Engineer);
+    /**
+    * Um Engenheiro
+    * @param {string} nome - O nome do engenheiro
+    * @param {number} idade - A idade do engenheiro
+    * @param {string} area - A área de atuação do engenheiro
+    */
+    function Engenheiro(nome, idade, area) {
+        _classCallCheck(this, Engenheiro);
 
-        var _this = _possibleConstructorReturn(this, (Engineer.__proto__ || Object.getPrototypeOf(Engineer)).call(this, name, age));
+        var _this = _possibleConstructorReturn(this, (Engenheiro.__proto__ || Object.getPrototypeOf(Engenheiro)).call(this, nome, idade));
 
-        _this.field = field;
+        _this.area = area;
         return _this;
     }
 
     /**
-     * Return the engineer's name and field
+     * Se apresenta, falando o nome e a área de atuação
      * @returns {string}
      */
 
 
-    _createClass(Engineer, [{
+    _createClass(Engenheiro, [{
         key: "introduceYourself",
         value: function introduceYourself() {
-            return "Hi, my name is " + this.name + " and I'm a " + this.field + " Engineer";
+            return "Ol\xE1, meu nome \xE9 " + this.nome + " e eu sou um Engenheiro " + this.area;
         }
 
         /**
-         * Easy peasy lemon squeezy!!! Let me just grab my HP50G.
+         * Facinho, só pegar a minha 50G.
          * @param {number} x
          * @param {number} y
          * @returns {number}
@@ -225,10 +225,10 @@ var Engineer = function (_Person) {
         }
     }]);
 
-    return Engineer;
-}(_Person2.Person);
+    return Engenheiro;
+}(_Pessoa2.Pessoa);
 
-exports.Engineer = Engineer;
+exports.Engenheiro = Engenheiro;
 
 /***/ })
 /******/ ]);

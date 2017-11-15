@@ -66,11 +66,49 @@
 /******/ ({
 
 /***/ 3:
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed: Error: ENOENT: no such file or directory, open 'D:\\Github\\javascript-modules\\JavascriptTips\\JavascriptTips\\Scripts\\ModuleA\\index.js'\n    at Error (native)");
+"use strict";
+
+
+(function () {
+    var $resultadoBlock = $("#resultado-block");
+    var $resultadoNonBlock = $("#resultado-nonblock");
+
+    var chamadasBlock = 0;
+    var chamadasNonBlock = 0;
+
+    function simulaChamadaAjax(cbSucesso) {
+        setTimeout(function () {
+            cbSucesso();
+        }, Math.floor(Math.random() * 5 + 5) * 1000);
+    }
+
+    $("#block").on("click", function () {
+        chamadasBlock++;
+        simulaChamadaAjax(function () {
+            $resultadoBlock.html("Realizou " + chamadasBlock + " chamadas");
+        });
+    });
+
+    $("#nonblock").on("click", function () {
+        $(this).attr("disabled", true);
+        chamadasNonBlock++;
+        simulaChamadaAjax(function () {
+            $(this).attr("disabled", false);
+            $resultadoNonBlock.html("Realizou " + chamadasNonBlock + " chamada");
+        }.bind(this));
+    });
+
+    $("#limpar").on("click", function () {
+        chamadasBlock = 0;
+        chamadasNonBlock = 0;
+        $resultadoBlock.html("");
+        $resultadoNonBlock.html("");
+    });
+})();
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=ModuleA.index.js.map
+//# sourceMappingURL=JavascriptTips.index.js.map
